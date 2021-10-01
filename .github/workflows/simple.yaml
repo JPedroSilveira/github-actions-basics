@@ -19,7 +19,3 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
-      - name: node command
-        run: |
-          console.log("Hello World")
-        shell: node
