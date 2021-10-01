@@ -12,3 +12,5 @@ jobs:
         run: |
           node -v
           npm -v
+      - name: echo a string again
+        run: echo "Hello World Again!"
