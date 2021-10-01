@@ -8,6 +8,10 @@ https://github.com/marketplace?type=actions
 
 https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows
 
+## Workflow syntax
+
+https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions
+
 ## Cron describer
 
 https://crontab.guru/
