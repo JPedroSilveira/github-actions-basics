@@ -14,3 +14,8 @@ jobs:
           npm -v
       - name: echo a string again
         run: echo "Hello World Again!"
+      - name: python command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
