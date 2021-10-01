@@ -12,6 +12,10 @@ https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-work
 
 https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions
 
+## Default Github environment variables
+
+https://docs.github.com/en/actions/learn-github-actions/environment-variables
+
 ## Cron describer
 
 https://crontab.guru/
