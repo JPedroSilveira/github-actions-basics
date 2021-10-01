@@ -1,2 +1,2 @@
 # Github Actions
-Simple repository to learn Github Actins
+A repository to learn Github Actins
