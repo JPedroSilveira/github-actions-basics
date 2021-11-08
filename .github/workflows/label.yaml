@@ -1,4 +1,4 @@
-name: Add Label to Commit
+name: Add Label to PR
 on: [pull_request_target]
 permissions:
   contents: read
