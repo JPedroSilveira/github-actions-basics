@@ -1,0 +1,12 @@
+name: Functions
+on: push
+jobs:
+  one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: String manipulation
+        run: |
+          echo ${{ contains('hello', 'll') }}
+          echo ${{ startsWith('hello', 'h') }}
+          echo ${{ endsWith('hello', 'o') }}
+          echo ${{ format('hello {0}', 'world') }}
