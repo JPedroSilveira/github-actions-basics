@@ -1,0 +1,18 @@
+name: Conditional 2
+on: [push, pull_request]
+jobs:
+  one:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    steps:
+      - name: Continue on error
+        continue-on-error: true
+        run: |
+          eccho "Fail"
+      - name: Never stop
+        run: |
+          echo "I will continue the job"
+      - name: Fail by timeout
+        timeout-minutes: 1
+        run: |
+          sleep 65 && echo "I will never be printed"
