@@ -19,3 +19,10 @@ jobs:
         if: always()
         run: |
           echo "I will live forever"
+      - name: Continue on error
+        run: |
+          eccho "Fail"
+        continue-on-error: true
+      - name: Never stop
+        run: |
+          echo "I will continue the job"
