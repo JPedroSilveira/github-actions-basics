@@ -19,14 +19,14 @@ jobs:
         if: always()
         run: |
           echo "I will live forever"
-      - name: Continue on error
-        run: |
-          eccho "Fail"
-        continue-on-error: true
-      - name: Never stop
-        run: |
-          echo "I will continue the job"
       - name: Fail by timeout
         timeout-minutes: 1
         run: |
           sleep 65 && echo "I will never be printed"
+      - name: Continue on error
+        continue-on-error: true
+        run: |
+          eccho "Fail"
+      - name: Never stop
+        run: |
+          echo "I will continue the job"
