@@ -1,9 +1,20 @@
-const express = require("express");
-const app = express();
-const port = 3000;
+var express = require("express");
+var app = express();
+var mongoose = require("mongoose");
+var apiController = require("./controllers/apiController");
 
-app.get("/health", (req, res) => {
-  res.send("I'm fine, thank you!");
-});
+var port = 3000;
+
+app.use("/assets", express.static(__dirname + "/public"));
+//mongo instead of localhost for docker-compose
+mongoose.connect(
+  "mongodb://localhost:27017/users",
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  err => {
+    console.log(err);
+  }
+);
+
+apiController(app);
 
 app.listen(port);
