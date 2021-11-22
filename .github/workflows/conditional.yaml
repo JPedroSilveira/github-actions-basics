@@ -26,3 +26,7 @@ jobs:
       - name: Never stop
         run: |
           echo "I will continue the job"
+      - name: Fail by timeout
+        timeout-minutes: 1
+        run: |
+          sleep 65 && echo "I will never be printed"
