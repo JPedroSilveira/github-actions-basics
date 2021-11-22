@@ -1,0 +1,17 @@
+name: Matrix
+on: push
+jobs:
+  node-version:
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+        node_version: [6, 8, 12, 14] # Will run 12 times, one for each SO
+      fail-fast: false # Run all even if one fails
+      max-parallel: 12 # Run all jobs in parallel
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node_version }}
+      - name: Log node version
+        run: node -v

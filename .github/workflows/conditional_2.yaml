@@ -15,4 +15,4 @@ jobs:
       - name: Fail by timeout
         timeout-minutes: 1
         run: |
-          sleep 65 && echo "I will never be printed"
+          sleep 120 && echo "I will fail by timeout"
