@@ -1,4 +1,4 @@
-name: Multiple Containers
+name: Multiple Container Services
 on: push
 jobs:
   node-docker:
